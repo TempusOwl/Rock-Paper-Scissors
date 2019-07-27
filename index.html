@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script>
+    userChoice = prompt("What do you choose? Rock, Paper or Scissors");
+    computerChoice = Math.random();
+
+    if (computerChoice <= .34) {
+        computerChoice = "rock"
+        console.log("Computer Choose Rock")
+        if (userChoice = ['rock', 'Rock']) {
+            console.log("You Have Tied!")
+        } else if (userChoice = ['paper', 'Paper']) {
+            console.log("You Have Won")
+        } else if (userChoice = ['scissors', 'Scissors']) {
+            console.log("You Have Lost")
+        } else if (computerChoice <= .67) {
+            computerChoice = "paper"
+            console.log("Computer Choose Paper")
+            console.log("You Have Tied1!")
+        }
+    }
+</script>
+
+<body>
+
+    <center>
+        <h1>Rock Paper Scissors</h1>
+        <p>Let The Games Begin!</p>
+    </center>
+
+</body>
+
+</html>
