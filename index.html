@@ -1,24 +1,30 @@
 <!DOCTYPE html>
 <html>
 <script>
-    userChoice = prompt("What do you choose? Rock, Paper or Scissors");
-    computerChoice = Math.random();
+    playerSelection = prompt("What do you choose? Rock, Paper or Scissors");
+    computerPlay = (Math.random() * 3)
+    console.log("Debug PS: " + (playerSelection.toLowerCase()))
 
-    if (computerChoice <= .34) {
-        computerChoice = "rock"
-        console.log("Computer Choose Rock")
-        if (userChoice = ['rock', 'Rock']) {
-            console.log("You Have Tied!")
-        } else if (userChoice = ['paper', 'Paper']) {
-            console.log("You Have Won")
-        } else if (userChoice = ['scissors', 'Scissors']) {
-            console.log("You Have Lost")
-        } else if (computerChoice <= .67) {
-            computerChoice = "paper"
-            console.log("Computer Choose Paper")
-            console.log("You Have Tied1!")
-        }
+
+    if (computerPlay == [0]) {
+        computerPlay = 'rock';
+        console.log("Debug Computer Played: " + (computerPlay))
+    } else if (computerPlay == [1]) {
+        computerPlay = 'paper';
+        console.log("Debug Computer Played: " + (computerPlay))
+    } else {
+        computerPlay == [2]
+        computerPlay = 'scissors';
+        console.log("Debug Computer Played: " + (computerPlay))
+    };
+
+    function playRound(playerSelection, computerSelection) {
+
     }
+
+    const playerSelection = 'rock'
+    const computerSelection = computerPlay()
+    console.log(playRound(playerSelection, computerSelection))
 </script>
 
 <body>
