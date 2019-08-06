@@ -1,16 +1,26 @@
 <!DOCTYPE html>
 <html>
 <script>
+    /*
+    Debugging is commented out, removement comments to visualize the code and debug it within your browsers "F12" dev "console". 
+    This code was created for Odin Project "Rock Paper Scissors".
+    August 2019
+    */
+
     playerSelection = prompt("What do you choose? Rock, Paper or Scissors");
-    console.log("Debug Your Choice: " + (playerSelection.toLowerCase()))
+    playerSelection = playerSelection.toLowerCase();
+    console.log("Debug Your Choice: " + (playerSelection))
     computerPlay = Math.floor(Math.random() * Math.floor(3));
+    // Debug Display 0-2 num gen result that decides if than statements below.
+    // console.log("ComputerPlay Num Gen : " + computerPlay);
     let a, b, c = 0;
     if (computerPlay == 0) {
-        computerPlay == 'rock';
-        console.log("Debug Computer Played: " + (computerPlay))
+        computerPlay = 'rock';
+        // Debug ~ Helps verify the if the "If Than Statements" declare computerPlay.
+        //console.log("Computer Played: " + (computerPlay))
         switch (playerSelection) {
             case 'rock':
-                console.log("Round: Tied")
+                console.log("Round: Tied");
                 break;
             case 'paper':
                 console.log("Round: Won");
@@ -23,10 +33,11 @@
         }
     } else if (computerPlay == 1) {
         computerPlay = 'paper';
-        console.log("Debug Computer Played: " + (computerPlay))
+        // Debug ~ Helps verify the if the "If Than Statements" declare computerPlay.
+        //console.log("Debug Computer Played: " + (computerPlay))
         switch (playerSelection) {
             case 'rock':
-                console.log("Round: Lost")
+                console.log("Round: Lost");
                 break;
             case 'paper':
                 console.log("Round: Tied");
@@ -37,12 +48,13 @@
             default:
                 console.log("Incorrect Answer, Try Again");
         }
-    } else if (computerPlay >= 2) {
+    } else if (computerPlay == 2) {
         computerPlay = 'scissors';
-        console.log("Debug Computer Played: " + (computerPlay))
+        // Debug ~ Helps verify the if the "If Than Statements" declare computerPlay.
+        //console.log("Debug Computer Played: " + (computerPlay))
         switch (playerSelection) {
             case 'rock':
-                console.log("Round: Won")
+                console.log("Round: Won");
                 break;
             case 'paper':
                 console.log("Round: Lost");
