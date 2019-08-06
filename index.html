@@ -1,32 +1,30 @@
 <!DOCTYPE html>
 <html>
 <script>
-    /*
-    Debugging is commented out, removement comments to visualize the code and debug it within your browsers "F12" dev "console". 
-    This code was created for Odin Project "Rock Paper Scissors".
-    August 2019
-    */
-
     playerSelection = prompt("What do you choose? Rock, Paper or Scissors");
     playerSelection = playerSelection.toLowerCase();
-    console.log("Debug Your Choice: " + (playerSelection))
+    // Debug ~ Player Selection
+    //console.log("Debug Your Choice: " + (playerSelection))
     computerPlay = Math.floor(Math.random() * Math.floor(3));
-    // Debug Display 0-2 num gen result that decides if than statements below.
-    // console.log("ComputerPlay Num Gen : " + computerPlay);
+    // Debug ~ Display 0-2 num gen result that decides if than statements below.
+    //console.log("ComputerPlay Num Gen : " + computerPlay);
     let a, b, c = 0;
     if (computerPlay == 0) {
         computerPlay = 'rock';
         // Debug ~ Helps verify the if the "If Than Statements" declare computerPlay.
-        //console.log("Computer Played: " + (computerPlay))
+        //console.log("Debug Computer Played: " + (computerPlay))
         switch (playerSelection) {
             case 'rock':
                 console.log("Round: Tied");
+                roundResult = 'tied';
                 break;
             case 'paper':
                 console.log("Round: Won");
+                roundResult = 'won';
                 break;
             case 'scissors':
                 console.log("Round: Lost");
+                roundResult = 'lost';
                 break;
             default:
                 console.log("Incorrect Answer, Try Again");
@@ -38,12 +36,15 @@
         switch (playerSelection) {
             case 'rock':
                 console.log("Round: Lost");
+                roundResult = 'lost';
                 break;
             case 'paper':
                 console.log("Round: Tied");
+                roundResult = 'tie';
                 break;
             case 'scissors':
                 console.log("Round: Won");
+                roundResult = 'won';
                 break;
             default:
                 console.log("Incorrect Answer, Try Again");
@@ -55,12 +56,15 @@
         switch (playerSelection) {
             case 'rock':
                 console.log("Round: Won");
+                roundResult = 'won';
                 break;
             case 'paper':
                 console.log("Round: Lost");
+                roundResult = 'lost';
                 break;
             case 'scissors':
                 console.log("Round: Tied");
+                roundResult = 'tie';
                 break;
             default:
                 console.log("Incorrect Answer, Try Again");
@@ -73,6 +77,22 @@
     <center>
         <h1>Rock Paper Scissors</h1>
         <p>Let The Games Begin!</p>
+        <p>
+            <script>
+                document.write("You Choose: " + playerSelection.toUpperCase());
+            </script>
+        </p>
+        <p>
+            <script>
+                document.write("Computer Choose: " + computerPlay.toUpperCase());
+            </script>
+        </p>
+        <p>
+            <script>
+                document.write("You Have: " + roundResult.toUpperCase() + "!");
+            </script>
+        </p>
+
     </center>
 
 </body>
