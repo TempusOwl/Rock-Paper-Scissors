@@ -2,29 +2,58 @@
 <html>
 <script>
     playerSelection = prompt("What do you choose? Rock, Paper or Scissors");
-    computerPlay = (Math.random() * 3)
-    console.log("Debug PS: " + (playerSelection.toLowerCase()))
-
-
-    if (computerPlay == [0]) {
-        computerPlay = 'rock';
+    console.log("Debug Your Choice: " + (playerSelection.toLowerCase()))
+    computerPlay = Math.floor(Math.random() * Math.floor(3));
+    let a, b, c = 0;
+    if (computerPlay == 0) {
+        computerPlay == 'rock';
         console.log("Debug Computer Played: " + (computerPlay))
-    } else if (computerPlay == [1]) {
+        switch (playerSelection) {
+            case 'rock':
+                console.log("Round: Tied")
+                break;
+            case 'paper':
+                console.log("Round: Won");
+                break;
+            case 'scissors':
+                console.log("Round: Lost");
+                break;
+            default:
+                console.log("Incorrect Answer, Try Again");
+        }
+    } else if (computerPlay == 1) {
         computerPlay = 'paper';
         console.log("Debug Computer Played: " + (computerPlay))
-    } else {
-        computerPlay == [2]
+        switch (playerSelection) {
+            case 'rock':
+                console.log("Round: Lost")
+                break;
+            case 'paper':
+                console.log("Round: Tied");
+                break;
+            case 'scissors':
+                console.log("Round: Won");
+                break;
+            default:
+                console.log("Incorrect Answer, Try Again");
+        }
+    } else if (computerPlay >= 2) {
         computerPlay = 'scissors';
         console.log("Debug Computer Played: " + (computerPlay))
-    };
-
-    function playRound(playerSelection, computerSelection) {
-
+        switch (playerSelection) {
+            case 'rock':
+                console.log("Round: Won")
+                break;
+            case 'paper':
+                console.log("Round: Lost");
+                break;
+            case 'scissors':
+                console.log("Round: Tied");
+                break;
+            default:
+                console.log("Incorrect Answer, Try Again");
+        }
     }
-
-    const playerSelection = 'rock'
-    const computerSelection = computerPlay()
-    console.log(playRound(playerSelection, computerSelection))
 </script>
 
 <body>
