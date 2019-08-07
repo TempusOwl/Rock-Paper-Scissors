@@ -9,6 +9,9 @@
     // Debug ~ Display 0-2 num gen result that decides if than statements below.
     //console.log("ComputerPlay Num Gen : " + computerPlay);
     let a, b, c = 0;
+   let computerWin = 0;
+   let playerWin = 0;
+   let roundResult = 0;
     if (computerPlay == 0) {
         computerPlay = 'rock';
         // Debug ~ Helps verify the if the "If Than Statements" declare computerPlay.
@@ -20,10 +23,12 @@
                 break;
             case 'paper':
                 console.log("Round: Won");
+                playerWin += 1;
                 roundResult = 'won';
                 break;
             case 'scissors':
                 console.log("Round: Lost");
+                computerWin += 1;
                 roundResult = 'lost';
                 break;
             default:
@@ -36,6 +41,7 @@
         switch (playerSelection) {
             case 'rock':
                 console.log("Round: Lost");
+                computerWin += 1;
                 roundResult = 'lost';
                 break;
             case 'paper':
@@ -44,6 +50,7 @@
                 break;
             case 'scissors':
                 console.log("Round: Won");
+                playerWin += 1;
                 roundResult = 'won';
                 break;
             default:
@@ -56,10 +63,12 @@
         switch (playerSelection) {
             case 'rock':
                 console.log("Round: Won");
+                playerWin += 1;
                 roundResult = 'won';
                 break;
             case 'paper':
                 console.log("Round: Lost");
+                computerWin += 1;
                 roundResult = 'lost';
                 break;
             case 'scissors':
@@ -68,8 +77,10 @@
                 break;
             default:
                 console.log("Incorrect Answer, Try Again");
+
         }
     }
+
 </script>
 
 <body>
